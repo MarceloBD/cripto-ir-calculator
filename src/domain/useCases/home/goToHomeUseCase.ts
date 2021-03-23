@@ -6,7 +6,7 @@ export default class GoToHomeUseCase {
   constructor(private homeRepository: HomeRepository){}
   
   execute(): string {
-    const file = fs.readFileSync(__dirname + '/home.html');
+    const file = fs.readFileSync(__dirname + '/../../../view/home.html');
     const $ = cheerio.load(file);
     $('div').text(this.homeRepository.getHome());
     return $.html();

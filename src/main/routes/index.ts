@@ -8,7 +8,7 @@ const routes = (app: Express): void => {
   });
 
   app.use('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/../../presentation/index.html'));
+    res.sendFile(path.join(__dirname + '/../../view/index.html'));
   });
 };
 
